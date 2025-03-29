@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  min-width: 320px;
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+html body {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #1A1A1A;
+}
+html body header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 8vh;
+}
+html body header h1 {
+  font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+}
+html body header h1, html body header h2 {
+  cursor: pointer;
+  color: #DEDEDE;
+}
+html body header h1:hover, html body header h2:hover {
+  color: #017888;
+}
+html body header a {
+  background-color: #017888;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #DEDEDE;
+  font-weight: 500;
+  transition: 300ms;
+  font-size: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+}
+html body header a:hover {
+  background-color: #DEDEDE;
+  color: #017888;
+  scale: 0.95;
+  box-shadow: 0px 0px 10px 1px #017888;
+}
+html body a {
+  color: #DEDEDE;
+  text-decoration: none;
+}
+html body h1 {
+  color: #DEDEDE;
+}
+html body h2 {
+  color: #017888;
+}
+
+@keyframes strokedash {
+  0% {
+    fill-opacity: 0;
+    stroke-dasharray: 1, 1000;
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+    opacity: 1;
+    transform: translate3d(0, -110px, 0);
+  }
+  30% {
+    fill-opacity: 0;
+    stroke-dasharray: 150, 0;
+    stroke-dashoffset: 0;
+    stroke-width: 1;
+    opacity: 1;
+    transform: translate3d(0, -110px, 0);
+  }
+  60%, 90% {
+    fill-opacity: 1;
+    stroke-dasharray: 150, 0;
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+    opacity: 1;
+    transform: translate3d(0, -110px, 0);
+  }
+  100% {
+    fill-opacity: 0;
+    stroke-dasharray: 150, 0;
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+    opacity: 0;
+    transform: translate3d(0, -110px, 0);
+  }
+}
+@keyframes strokedash-logo {
+  0% {
+    fill-opacity: 0;
+    stroke-dasharray: 1, 1000;
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+    opacity: 1;
+    transform: translate3d(0, 70px, 0);
+  }
+  70% {
+    fill-opacity: 0;
+    stroke-dasharray: 150, 0;
+    stroke-dashoffset: 0;
+    stroke-width: 1;
+    opacity: 1;
+    transform: translate3d(0, 70px, 0);
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dasharray: 150, 0;
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+    opacity: 1;
+    transform: translate3d(0, 70px, 0);
+  }
+}
+@keyframes xbox-shadow {
+  0%, 20% {
+    filter: drop-shadow(0px 0px 0px rgba(247, 247, 247, 0)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+  }
+  40%, 50% {
+    filter: drop-shadow(0px 0px 30px rgba(247, 247, 247, 0.5)) drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.5));
+  }
+  75% {
+    filter: drop-shadow(0px 0px 0px rgba(247, 247, 247, 0)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+  }
+  100% {
+    filter: drop-shadow(0px 0px 30px rgba(247, 247, 247, 0.5)) drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.5));
+  }
+}
+@keyframes xbox-color {
+  0% {
+    fill: #f7f7f7;
+  }
+  70% {
+    fill: #f7f7f7;
+  }
+  100% {
+    fill: #217721;
+  }
+}
+.container-geral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 92vh;
+  height: auto;
+  gap: 24px;
+  background-color: #161616;
+}
+.container-geral svg {
+  width: 300px;
+  height: auto;
+  filter: drop-shadow(0px 0px 0px rgba(247, 247, 247, 0)), drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+  animation: xbox-shadow 12s ease 0s forwards;
+}
+.container-geral svg #xbox-x1 {
+  animation: strokedash 5s ease 0s forwards;
+}
+.container-geral svg #xbox-x2 {
+  animation: strokedash 5s ease 0s forwards;
+}
+.container-geral svg #xbox-b {
+  animation: strokedash 5s ease 0s forwards;
+}
+.container-geral svg #xbox-o {
+  animation: strokedash 5s ease 0s forwards;
+}
+.container-geral svg #xbox-logo {
+  opacity: 0;
+  animation: strokedash-logo 4s ease 5s forwards;
+}
+.container-geral svg #xbox-logo :nth-child(1) {
+  animation: xbox-color 12s ease 0s forwards;
+}
+.container-geral svg #xbox-logo :nth-child(2) {
+  animation: xbox-color 12s ease 0s forwards;
+}
+.container-geral svg #xbox-logo :nth-child(3) {
+  animation: xbox-color 12s ease 0s forwards;
+}
+.container-geral svg #xbox-logo :nth-child(4) {
+  animation: xbox-color 12s ease 0s forwards;
+}
+.container-geral svg #xbox-logo :nth-child(5) {
+  animation: xbox-color 12s ease 0s forwards;
+}
+.container-geral svg #xbox-logo :nth-child(6) {
+  animation: xbox-color 12s ease 0s forwards;
+}
+.container-geral svg #xbox-logo :nth-child(7) {
+  animation: xbox-color 12s ease 0s forwards;
+}
+.container-geral svg #xbox-logo :nth-child(8) {
+  animation: xbox-color 12s ease 0s forwards;
+}
+.container-geral .btn-reload {
+  color: #4a704a;
+  font-size: 20px;
+}
+.container-geral .btn-reload:hover {
+  color: #217721;
+  scale: 0.99;
+}/*# sourceMappingURL=style.css.map */
