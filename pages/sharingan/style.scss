@@ -9,17 +9,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 30px;
 
     .sharingan {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 300px;
         height: 300px;
         position: relative;
         border-radius: 50%;
-        background-color: #b70000;
+        background-color: #eb0b0b;
         border: 7px solid #1a1a1a;
-        box-shadow: 0px 0px 100px 50px#492a2a, inset 0px 0px 100px 0px#2b1d1df5;
+        box-shadow: 0px 0px 100px 50px#866666bd, inset 0px 0px 100px 0px#2b1d1df5;
         overflow: hidden;
-        animation: sharinganrotate 12s ease 0s ;    
+        animation: sharinganrotate 12s ease 0s forwards ;    
 
 
         &::before {
@@ -37,6 +42,20 @@
 
         }
 
+        img{
+            opacity: 0;
+            // position: absolute;
+            z-index: 15;
+            width: 300px;
+            height: 300px;
+            padding: 7px;
+            top: 0;
+            border: 4px solid #1a1a1a;
+            left: 0;
+            // transform: translate(-50%, -50%);
+            animation: mangekyou 3s linear 13s forwards;
+        }
+
         .tomoe {
             width: 42px;
             height: 42px;
@@ -47,12 +66,13 @@
             z-index: 10px;
             transform: translate(-50%, -50%);
             background-color: #1a1a1a;
-            box-shadow: 0px 0px 50px 50px #00000054;
-            animation: tomoeexpand 1s linear forwards 0s;
+            box-shadow: 0px 0px 50px 50px #ff0000;
+            animation: tomoeexpand 1s linear forwards 0s,
+            indextomoe 2s linear forwards 13s;
 
 
         }
-
+        
         .tomoe1 {
             width: 35px;
             height: 35px;
@@ -60,13 +80,13 @@
             position: absolute;
             background-color: #1a1a1a;
             top: 16%;
-            z-index: 9;
+            // z-index: 9;
             left: 59%;
-            // opacity: 0;
+            opacity: 0;
             animation: opacitytomoes .2s ease 2.4s forwards,
-                rotatetomoes 1s ease 3s;
-
-
+            rotatetomoes 1s ease 3s;
+            
+            
             &::before {
                 content: "";
                 position: absolute;
@@ -80,10 +100,10 @@
                 border-bottom-left-radius: 80%;
                 border-bottom-right-radius: 0%;
                 background-color: #1a1a1a;
-
+                
             }
         }
-
+        
         .tomoe2 {
             width: 35px;
             height: 35px;
@@ -145,6 +165,16 @@
             }
         }
 
+    }
+
+    .btn-reload{
+        color: #ff0000;
+        font-size: 20px;
+
+        &:hover{
+            color: #ff0000b4;
+            scale: 0.99;
+        }
     }
 
 }

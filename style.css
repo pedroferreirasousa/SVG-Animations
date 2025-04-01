@@ -102,7 +102,6 @@ html body h2 {
   border: 3px solid #666866;
   border-radius: 10px;
   overflow: hidden;
-  background-image: url("../css/images/print-xbox.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -134,6 +133,12 @@ html body h2 {
 .content-1 .card-1 h2 {
   color: rgb(8, 187, 103);
 }
-.content-1 .card-5 h2 {
+.content-1 .card-1 .card-img-container {
+  background-image: url("../css/images/print-xbox.png");
+}
+.content-1 .card-2 h2 {
   color: red;
+}
+.content-1 .card-2 .card-img-container {
+  background-image: url("../css/images/print-sharingan.png");
 }/*# sourceMappingURL=style.css.map */
