@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  min-width: 320px;
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+html body {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #1A1A1A;
+}
+html body header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 8vh;
+}
+html body header h1 {
+  font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+}
+html body header h1, html body header h2 {
+  cursor: pointer;
+  color: #DEDEDE;
+}
+html body header h1:hover, html body header h2:hover {
+  color: #017888;
+}
+html body header a {
+  background-color: #017888;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #DEDEDE;
+  font-weight: 500;
+  transition: 300ms;
+  font-size: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+}
+html body header a:hover {
+  background-color: #DEDEDE;
+  color: #017888;
+  scale: 0.95;
+  box-shadow: 0px 0px 10px 1px #017888;
+}
+html body a {
+  color: #DEDEDE;
+  text-decoration: none;
+}
+html body h1 {
+  color: #DEDEDE;
+}
+html body h2 {
+  color: #017888;
+}
+
+@keyframes tomoeexpand {
+  0% {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a1a1a;
+    box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.3294117647);
+  }
+  100% {
+    border: 10px solid #1a1a1a;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    background-color: #6b0202;
+    box-shadow: inset 0px 0px 10px rgba(56, 1, 1, 0.9607843137);
+    box-shadow: 0px 0px 100px 50px #492a2a, inset 0px 0px 100px 0px rgba(99, 3, 3, 0.2588235294);
+  }
+}
+@keyframes tomoeexpand2 {
+  0% {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #1a1a1a;
+    top: 16%;
+    left: 59%;
+  }
+}
+.container-geral {
+  width: 100vw;
+  height: auto;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-geral .sharingan {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #b70000;
+  border: 7px solid #1a1a1a;
+  box-shadow: 0px 0px 100px 50px #492a2a, inset 0px 0px 100px 0px rgba(43, 29, 29, 0.9607843137);
+  overflow: hidden;
+  animation: sharinganrotate 12s ease 0s;
+}
+.container-geral .sharingan::before {
+  content: "";
+  border: 5px solid #1a1a1a;
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0;
+  animation: opacitytomoes 0.5s ease 2.4s forwards;
+}
+.container-geral .sharingan .tomoe {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10px;
+  transform: translate(-50%, -50%);
+  background-color: #1a1a1a;
+  box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.3294117647);
+  animation: tomoeexpand 1s linear forwards 0s;
+}
+.container-geral .sharingan .tomoe1 {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #1a1a1a;
+  top: 16%;
+  z-index: 9;
+  left: 59%;
+  animation: opacitytomoes 0.2s ease 2.4s forwards, rotatetomoes 1s ease 3s;
+}
+.container-geral .sharingan .tomoe1::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 6px;
+  width: 26px;
+  height: 30px;
+  transform: rotate(73deg) skewX(33deg) skewY(-52deg);
+  border-top-left-radius: 40%;
+  border-top-right-radius: 14%;
+  border-bottom-left-radius: 80%;
+  border-bottom-right-radius: 0%;
+  background-color: #1a1a1a;
+}
+.container-geral .sharingan .tomoe2 {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #1a1a1a;
+  top: 74%;
+  left: 54%;
+  opacity: 0;
+  animation: opacitytomoes 2s ease 4.8s forwards, rotatetomoes2 1s ease 5.4s forwards;
+}
+.container-geral .sharingan .tomoe2::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 6px;
+  width: 26px;
+  height: 30px;
+  transform: rotate(73deg) skewX(33deg) skewY(-52deg);
+  border-top-left-radius: 40%;
+  border-top-right-radius: 13%;
+  border-bottom-left-radius: 80%;
+  border-bottom-right-radius: 0%;
+  background-color: #1a1a1a;
+}
+.container-geral .sharingan .tomoe3 {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #1a1a1a;
+  top: 47%;
+  left: 12%;
+  opacity: 0;
+  animation: opacitytomoes 2s ease 7.2s forwards, rotatetomoes3 1s ease 7.8s forwards;
+}
+.container-geral .sharingan .tomoe3::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 6px;
+  width: 26px;
+  height: 30px;
+  z-index: 5;
+  transform: rotate(73deg) skewX(33deg) skewY(-52deg);
+  border-top-left-radius: 40%;
+  border-top-right-radius: 13%;
+  border-bottom-left-radius: 80%;
+  border-bottom-right-radius: 0%;
+  background-color: #1a1a1a;
+}/*# sourceMappingURL=style.css.map */

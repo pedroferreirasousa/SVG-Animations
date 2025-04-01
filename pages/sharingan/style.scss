@@ -1,0 +1,151 @@
+@import '../../css/variables';
+@import '../../css/animation_sharingan';
+
+
+.container-geral {
+    width: 100vw;
+    height: auto;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .sharingan {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        border-radius: 50%;
+        background-color: #b70000;
+        border: 7px solid #1a1a1a;
+        box-shadow: 0px 0px 100px 50px#492a2a, inset 0px 0px 100px 0px#2b1d1df5;
+        overflow: hidden;
+        animation: sharinganrotate 12s ease 0s ;    
+
+
+        &::before {
+            content: '';
+            border: 5px solid #1a1a1a;
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            opacity: 0;
+            animation: opacitytomoes .5s ease 2.4s forwards;
+
+        }
+
+        .tomoe {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 10px;
+            transform: translate(-50%, -50%);
+            background-color: #1a1a1a;
+            box-shadow: 0px 0px 50px 50px #00000054;
+            animation: tomoeexpand 1s linear forwards 0s;
+
+
+        }
+
+        .tomoe1 {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: #1a1a1a;
+            top: 16%;
+            z-index: 9;
+            left: 59%;
+            // opacity: 0;
+            animation: opacitytomoes .2s ease 2.4s forwards,
+                rotatetomoes 1s ease 3s;
+
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -9px;
+                left: 6px;
+                width: 26px;
+                height: 30px;
+                transform: rotate(73deg) skewX(33deg) skewY(-52deg);
+                border-top-left-radius: 40%;
+                border-top-right-radius: 14%;
+                border-bottom-left-radius: 80%;
+                border-bottom-right-radius: 0%;
+                background-color: #1a1a1a;
+
+            }
+        }
+
+        .tomoe2 {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: #1a1a1a;
+            top: 74%;
+            left: 54%;
+            // transform: rotate(160deg);
+            opacity: 0;
+            animation: opacitytomoes 2s ease 4.8s forwards,
+                rotatetomoes2 1s ease 5.4s forwards;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -9px;
+                left: 6px;
+                width: 26px;
+                height: 30px;
+                transform: rotate(73deg) skewX(33deg) skewY(-52deg);
+                border-top-left-radius: 40%;
+                border-top-right-radius: 13%;
+                border-bottom-left-radius: 80%;
+                border-bottom-right-radius: 0%;
+                background-color: #1a1a1a;
+
+            }
+        }
+
+        .tomoe3 {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: #1a1a1a;
+            top: 47%;
+            left: 12%;
+            // transform: rotate(250deg);
+            opacity: 0;
+            animation: opacitytomoes 2s ease 7.2s forwards,
+                rotatetomoes3 1s ease 7.8s forwards;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -9px;
+                left: 6px;
+                width: 26px;
+                height: 30px;
+                z-index: 5;
+                transform: rotate(73deg) skewX(33deg) skewY(-52deg);
+                border-top-left-radius: 40%;
+                border-top-right-radius: 13%;
+                border-bottom-left-radius: 80%;
+                border-bottom-right-radius: 0%;
+                background-color: #1a1a1a;
+
+            }
+        }
+
+    }
+
+}
+
