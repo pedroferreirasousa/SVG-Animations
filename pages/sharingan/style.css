@@ -29,6 +29,9 @@ html body header {
 html body header h1 {
   font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
 }
+html body header h2 {
+  font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+}
 html body header h1, html body header h2 {
   cursor: pointer;
   color: #DEDEDE;

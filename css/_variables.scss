@@ -40,6 +40,10 @@ html {
             h1{
                 font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
             }
+            
+            h2{
+                font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+            }
 
             h1, h2{
                 cursor: pointer;
