@@ -2,7 +2,7 @@
 
 
 
-.container-geral{
+.container-geral {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,18 +11,18 @@
     min-height: calc(100vh - 8vh);
     height: auto;
     gap: 24px;
-    
 
-    .content{
+
+    .content {
         display: flex;
         gap: 24px;
         padding: 24px;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        
 
-        .card{
+
+        .card {
             width: 280px;
             height: 400px;
             box-shadow: 0px 0px 10px $btn-color;
@@ -32,11 +32,11 @@
             justify-content: space-around;
             border-radius: 15px;
 
-            h2{
+            h2 {
                 letter-spacing: 1px;
             }
 
-            .card-img-container{
+            .card-img-container {
                 width: 250px;
                 height: 200px;
                 display: flex;
@@ -51,19 +51,20 @@
                 transition: 800ms;
                 opacity: 0.5;
 
-                &:hover{
+                &:hover {
                     scale: 1.05;
                     opacity: 1;
                     border: 1px solid $btn-color;
                 }
-                
-                
+
+
                 // .card-img{
 
                 // }
 
             }
-            .btn-card{
+
+            .btn-card {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -75,7 +76,7 @@
                 letter-spacing: 1px;
                 transition: 300ms;
 
-                &:hover{
+                &:hover {
                     scale: 0.9;
                     background-color: $btn-color-hover;
                 }
@@ -84,35 +85,56 @@
     }
 }
 
-.content-1{
+.content-1 {
     .card-1 {
-        h2{
+        h2 {
             color: rgb(8, 187, 103);
-            
+
         }
-        .card-img-container{
+
+        .card-img-container {
             background-image: url('../css/images/print-xbox.png');
         }
     }
 
-    .card-2{
-        h2{
+    .card-2 {
+        h2 {
             color: red;
         }
 
-        .card-img-container{
+        .card-img-container {
             background-image: url('../css/images/print-sharingan.png');
         }
     }
 
-    .card-3{
-        h2{
-            color: red;
+    .card-3 {
+
+        
+        h2 {
+
+
+            // background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, purple, magenta, pink, gray, white, red, orange, yellow, green , cyan, blue, purple, magenta, pink, gray, white);
+            // background-position: left bottom;
+            // background-size: 200% 100%;
+            // color: transparent;
+            // background-clip: text;
+            // animation: arcoiris 4s ease-in-out infinite alternate;
         }
 
-        .card-img-container{
+        .card-img-container {
             background-image: url('../css/images/print-camaleao.png');
         }
     }
 
 }
+
+// @keyframes arcoiris {
+//     0% {
+//         background-position: left;
+//     }
+
+//     100%{
+//         background-position: right;
+//     }
+
+// }
