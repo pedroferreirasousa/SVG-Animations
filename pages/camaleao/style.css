@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  min-width: 320px;
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+html body {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #1A1A1A;
+}
+html body header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 8vh;
+}
+html body header h1 {
+  font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+}
+html body header h2 {
+  font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+}
+html body header h1, html body header h2 {
+  cursor: pointer;
+  color: #DEDEDE;
+}
+html body header h1:hover, html body header h2:hover {
+  color: #017888;
+}
+html body header a {
+  background-color: #017888;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #DEDEDE;
+  font-weight: 500;
+  transition: 300ms;
+  font-size: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+}
+html body header a:hover {
+  background-color: #DEDEDE;
+  color: #017888;
+  scale: 0.95;
+  box-shadow: 0px 0px 10px 1px #017888;
+}
+html body a {
+  color: #DEDEDE;
+  text-decoration: none;
+}
+html body h1 {
+  color: #DEDEDE;
+}
+html body h2 {
+  color: #017888;
+}
+
+@keyframes piscar {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes tremer {
+  0% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(0.9) rotate(5deg);
+  }
+  50% {
+    transform: scaleY(1.1) rotate(-5deg);
+  }
+  75% {
+    transform: scaleY(0.9) rotate(0deg);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes olhar {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-15px);
+  }
+  66% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.container-geral {
+  width: 100vw;
+  height: auto;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.container-geral-1 .container-camaleao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 320px;
+  height: auto;
+  gap: 15px;
+  text-align: center;
+}
+.container-geral-1 .container-camaleao .input-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
+  height: 100%;
+}
+.container-geral-1 .container-camaleao .input-div .input-color {
+  width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+}
+.container-geral-1 .container-camaleao .input-div .input-color::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 20px;
+}
+.container-geral-1 .container-camaleao .input-div .input-color::-webkit-color-swatch {
+  border: 5px solid #4e4b4b;
+  border-radius: 20px;
+}
+.container-geral-1 .container-camaleao #applycolor {
+  width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  background-color: #017888;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.container-geral-1 .container-camaleao #applycolor:hover {
+  background-color: rgba(1, 120, 136, 0.7137254902);
+  scale: 0.99;
+}
+.container-geral-1 .wrapper-camaleao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
+  height: auto;
+  border: 5px solid #4e4b4b;
+  padding: 50px;
+  border-radius: 20px;
+}
+.container-geral-1 .wrapper-camaleao svg {
+  perspective: 200px;
+}
+.container-geral-1 .wrapper-camaleao svg #chameleon {
+  filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.7411764706));
+}
+.container-geral-1 .wrapper-camaleao svg #chameleon #eye-chameleon #eye {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}/*# sourceMappingURL=style.css.map */

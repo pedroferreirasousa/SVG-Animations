@@ -1,0 +1,60 @@
+
+
+
+
+
+@keyframes piscar {
+    0%{
+        transform: scaleY(1);
+    }
+
+    50%{
+        transform: scaleY(0.1);
+    }
+
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+@keyframes tremer{
+    0%{
+        transform: scaleY(1);
+    }
+    
+    25%{
+        transform: scaleY(0.9) rotate(5deg) ;
+    }
+
+    50%{
+        transform: scaleY(1.1) rotate(-5deg);
+    }
+
+    75%{
+        transform: scaleY(0.9) rotate(0deg);
+    }
+
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+@keyframes olhar {
+    0%{
+        transform: translateX(0);
+    }
+
+    33%{
+        transform: translateX(-15px);
+    }
+
+    66%{
+        transform: translateX(15px);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+
+
+}

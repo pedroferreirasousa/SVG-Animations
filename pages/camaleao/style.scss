@@ -1,0 +1,112 @@
+@import '../../css/variables';
+@import '../../css/animation_chamaleon';
+
+
+.container-geral {
+    width: 100vw;
+    height: auto;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container-geral-1 {
+
+    .container-camaleao {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 320px;
+        height: auto;
+        gap: 15px;
+        text-align: center;
+
+
+        .input-div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
+            height: 100%;
+
+
+            .input-color {
+                width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
+                height: 50px;
+                border-radius: 20px;
+                border: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                padding: 0;
+                cursor: pointer;
+                background: none;
+            }
+
+            .input-color::-webkit-color-swatch-wrapper {
+                padding: 0;
+                border-radius: 20px;
+            }
+
+            .input-color::-webkit-color-swatch {
+                border: 5px solid #4e4b4b;
+                border-radius: 20px;
+            }
+        }
+
+        #applycolor {
+            width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
+            height: 50px;
+            border-radius: 20px;
+            border: none;
+            background-color: #017888;
+            color: #ffffff;
+            font-size: 20px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #017888b6;
+                scale: 0.99;
+            }
+        }
+
+    }
+
+    .wrapper-camaleao {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
+        height: auto;
+        border: 5px solid #4e4b4b;
+        padding: 50px;
+        border-radius: 20px;
+
+        svg {
+
+            perspective: 200px;
+
+            #chameleon {
+                filter: drop-shadow(0px 0px 50px #ffffffbd);
+                // animation: tremer 1.2s linear 1s;
+
+                #eye-chameleon {
+
+                    #eye {
+                        transform-origin: 50% 50%;
+                        transform-box: fill-box;
+                        // animation: piscar 1s linear 2.2;
+                    }
+
+                    // #iris{
+                    //     // animation: olhar 1s linear 0s;
+                    // }
+                }
+            }
+        }
+    }
+}
